@@ -1,0 +1,960 @@
+html {
+	font-size:100%; /* gradual text increasing in IE */
+}
+
+/* main divisions */
+body {
+	background: #D8D8D8;
+	font-family: Arial;
+	line-height:700%;
+	font-size:62.5%;
+	color:#333;
+	padding:1em;
+	padding-top: 0;
+}
+
+
+	#wrap {
+	
+		width:90em;
+		margin:30em auto 0 auto;
+
+	}
+	
+		.object {
+		
+			display: inline;
+			overflow: auto;
+			position: relative;
+			
+		}
+			.object div {
+			
+			}
+			label {
+			
+				display: inline;
+				font-size: 1.4em;
+				margin-bottom: .5em;
+			}
+		
+			.number, .operator, .result {
+			
+				padding:0.5em;
+				font-size: 3em;
+				display: inline;
+				text-align:center;
+				color: #333;
+			}
+			
+				textarea {
+					background: transparent;
+					border: 0 none;
+    				color: #333333;
+    				font-family: Arial;
+    				font-size: 1.1em;
+				}
+		
+			.number {
+			
+				background: white;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+			}
+				.number:hover {
+				
+					background: #FCF4D2;
+				}
+			
+			.operator {
+			
+			
+			}
+			
+			.result {
+			
+				-moz-border-radius: 0 5px 5px 0;
+				-webkit-border-radius: 5px;
+				background: #D2EFCB;
+				margin-left: -.2em;
+				padding-left: 0.3em;
+			}
+			.result:before {
+			
+				content:"= ";
+			}
+
+
+		.object a.delete {
+		
+			background: url("images/modal_close.png") no-repeat scroll 0 0 transparent;
+		    display: block;
+		    height: 34px;
+		    position: absolute;
+		    right: -12px;
+		    top: -45px;
+		    width: 31px;
+		}
+		
+		a.new img {
+			border: 0;
+			margin: 0 0 -.6em 2em;
+		}
+	
+		#header {
+
+		}
+
+		#page {
+		
+			margin-top: 10em;
+			background: white url('images/page.png');
+			padding:1.5em;
+			overflow: auto;
+		}
+		
+			#content {
+			
+				float:right;
+				width:65.5em;
+			}
+			
+			#sidebar {
+			
+				float:left;
+				width:20em;
+			}
+			
+				#nav {
+				
+					border-right: 0 solid #999 /*#E5E5E4*/;
+				
+				}
+			
+				.teaser {
+				
+					margin-bottom: 1em;
+				}
+			
+			.panels-flexible-region-2-center {
+				
+				width: 590px;
+			}
+				
+			/* front page right pane */
+			.panels-flexible-region-2-right {
+			
+				padding-left: 1em;
+				border-left: 1px solid #8D817B;
+				margin-left: 1em;
+				width: 281px;
+				float: right;
+			}	
+			
+			#slideshow {
+			
+				margin:-1em;
+				padding: 1em;
+				background: black;
+			}	
+		
+		
+		/* panes */			
+			.panes {
+			
+				overflow:auto;
+			}
+		
+			.pane {
+			
+				float: left;
+			}
+			
+			
+			
+			
+		
+		#quote {
+		
+			background: url('images/quote.png') no-repeat;
+		
+			width: 828px;
+			height: 87px;
+		}
+			#quote p {
+			
+				float:right;
+				font-size: 2em !important;
+				padding: 0.5em;
+
+			}
+			#quote strong {
+			
+				line-height: 1.8em;
+			}
+			
+			#quote p.email {
+			
+				width: 13em;
+				margin-left: 4em;
+			}
+		
+		#footer {
+
+			padding:0 2em 0 2em;
+			margin-top: .5em;
+			
+			color: #333;
+		}
+			#footer a, #footer a:link, #footer a:visited {
+				color: #333;
+
+			}
+			p.copy, #footer .links {
+			
+				padding-top: .3em;
+			}
+			p.copy {
+				background: url('images/eye.png') 100% 40% no-repeat;
+				float: right;
+				height: 2.2em;
+    			padding-right: 35px;
+			}
+		
+			#footer .links {
+				float:left;
+				width: 50%;
+			}
+			
+	
+/* paragraphs & inlines */
+
+p, .more-link a {
+	font-size: 1.3em;
+	margin-bottom: 0.5em;
+	padding:0;
+}
+	.teaser p {
+		margin-bottom: 0;
+	}
+	
+	#sidebar p {
+		font-size:0.9em;
+	}
+	
+br {
+	line-height:0.6;
+}
+
+.highlight {
+	background:#E9E6E4;
+	padding:0.2em;
+}
+
+.more-link a, .more-link a:visited, .more-link a:link {
+
+	color: #333;
+	font-weight: bold;
+	
+}
+
+
+/* images */
+
+img {
+	margin-bottom:0.5em;
+}
+
+	#content img {
+		padding: 1em;
+		background: url('images/paper.jpg')
+	}
+	
+	img#slideimg {
+	
+		margin-bottom:-0.5em;
+	}
+		
+	#node img, .teaser img {
+	
+		float: right;
+		margin-left: 1em;
+	}
+	.teaser img {
+	
+		margin-left: .2em;
+	}	
+
+hr {
+	border:0;
+	border-bottom:1px solid #A69895;
+	margin:0.42em 0 0.42em 0;
+}
+
+
+
+.description {
+	font-size:0.9em;
+}
+
+/* links */
+
+a, a:visited {
+
+	color:#0E4E8B
+}
+
+
+/* menus */
+
+#wrap li {
+
+	font-size: 1.5em;
+
+}
+
+#nav ul, #footer ul {
+
+	list-style: none;
+
+}
+
+	#footer li {
+
+		display: inline;
+	}
+	
+	
+	#nav li {
+
+	}
+
+#nav ul {
+	margin-bottom: 1em;
+}
+
+	#nav a {
+		color: #333;
+		text-decoration:none;
+		text-transform:lowercase;
+	}
+		#nav ul a:visited {
+			color:#333;
+		}
+
+		#nav li {
+		
+			padding:0.1em 0;
+		}
+		
+		#nav a.active {
+			font-weight: bold;
+		}
+		
+
+	#footer li {
+	
+		border-right: 1px solid #333;
+    	display: inline;
+    	padding: 0 0.5em;
+    }	
+		#footer li.last {
+	
+			border-right: 0;
+    	}	
+			#footer li a {
+		
+				text-decoration: none;
+				text-transform: lowercase;
+			} 
+	    	   	    	
+	#footer li.first {
+	
+    	padding-left: 0;
+    }
+    
+#tabs {
+
+	overflow: auto;
+}
+ul.tabs {
+	
+	float: right;
+
+}
+
+
+/* headers */
+@font-face {
+	font-family: BigCaslon;
+	font-src: url('BigCaslon.ttf');
+}
+
+h1, h2, h3, h4 {
+	color:#515151;
+
+}
+h1 {
+	font-family: BigCaslon;
+	font-weight: normal;
+	font-size:3em;
+	text-transform: uppercase;
+	padding-bottom: .2em;
+	background: url('images/hr.png') 0 100% repeat-x;
+	margin-bottom:0.5em;
+}
+	
+#content h2 {
+	color: #AB893D;
+	margin-bottom:0.5em;
+	font-size:2.3em;
+	font-family: Geneva;
+	font-weight: normal;
+}
+
+	#nav > h2 {
+	
+		font-size: 1.5em;
+		clear: both;
+		padding: 0.3em 0;
+	}
+
+h3 {
+
+	color: #AC8A33;
+	font-size: 1.4em;
+}
+
+
+
+/* lists */
+
+
+	#services ul li, ol li {
+		list-style-image: url('images/diamond.png');
+		background: url('images/underline.png') bottom left no-repeat;
+		margin:0.42em 0 0.42em .2em;
+		padding:.1em;
+		display: inline;
+		font-size: 3em !important;
+	}
+	
+	ol li {
+		list-style:decimal;
+	}
+
+/* tabs */
+
+ul.menu {
+	clear: both;
+}
+
+ul.tabs {
+
+	display: block;
+	margin-left: 0 !important;
+}
+
+ul.tabs li {
+	float:left;
+	text-align:center;
+	background: #ccc;
+	padding:0.5em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 0 0.5em 0.5em 0;
+}
+
+
+	
+	
+/* 
+ TABLES */
+
+table {
+	border-collapse:collapse;
+	background:#E9E6E4;
+	margin-bottom:0.5em;
+	width: 100%;
+	
+}
+	table.views-view-grid {
+		background:none;
+		border:none;
+	}
+	thead {
+		background:#7D6E68;
+		text-align:center;
+	}
+	table th {
+		padding:.5em;
+		color:white !important;
+		vertical-align:middle;
+	}
+	table td {
+		border:1px solid #BAB5B0;
+			border-top:0;
+		padding:0.5em;
+	}
+		table.views-view-grid td {
+			border:0;
+			padding:0;
+		}
+		table tr.flour {
+			background:url('images/is_flour-short.png') 98% 100% no-repeat;
+		}
+		table tr.total {
+			text-align:center;
+			background:url('images/opacity/black10.png');
+		}
+
+
+
+
+
+
+/* slideshow */
+
+
+.jcarousel-container {
+	padding: 12px;
+    background: #121212;
+    margin: -0.2em;
+}
+
+.jcarousel-container-horizontal, .jcarousel-clip-horizontal {
+    width: auto;
+    height: 240px;
+
+}
+
+.jcarousel-clip-horizontal {
+    width: 845px;
+
+}
+
+/* .jcarousel-list li, .jcarousel-item */
+
+.jcarousel-item {
+    width: 845px !important;
+    height: 240px !important;
+	margin:0; /* Why was there margin here? */
+}
+	ul li {
+		margin-left:0 !important; /* overriding #paper ul li */
+	}
+
+	.jcarousel-item img {
+		margin-bottom:0 !important;
+	}
+	.jcarousel-item h1 {
+		font-size:1.3em;
+		font-weight:normal;
+		margin:0.5em 0 0em 2.3em;
+	}
+	.jcarousel-item h1, .jcarousel-item p {
+		color:#efefef;
+	}
+	.jcarousel-item p {
+		font-size:1em;
+		margin:0 0 0 3em;
+	}
+.jcarousel-item-horizontal {
+   
+}
+
+
+
+.jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-next-horizontal {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    background: transparent url(images/next.png) no-repeat 0 0;
+}
+
+
+.jcarousel-prev-horizontal {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    background: transparent url(images/prev.png) no-repeat 0 0;
+}
+
+
+
+
+
+
+
+			
+
+/* notifications */
+
+.sticky, .status, div.error {
+	padding:0.7em 0.7em 0.7em 2.2em;
+	margin-bottom:0.5em;
+}
+.sticky {
+  border: 1px solid #e0e5fb;
+}
+.status {
+	background:#E4FFD8 url('images/tick.gif') 1% 50% no-repeat;
+	border:1px solid #C3F0BA;	
+}
+div.error {
+	background:#FFEAE8 url('images/stop.gif') 1% 50% no-repeat !important;
+	border:1px solid #F1D3D0;
+}
+
+
+/* fields */
+
+fieldset {
+	border:1px solid #A69895;
+	padding:0.5em;
+}
+
+
+textarea {
+
+}
+
+.form-item {
+  margin-top: 1.05em;
+  margin-bottom: 1.05em;
+}
+tr.odd .form-item, tr.even .form-item {
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+tr.merge-down, tr.merge-down td, tr.merge-down th {
+  border-bottom-width: 0 !important;
+}
+tr.merge-up, tr.merge-up td, tr.merge-up th {
+  border-top-width: 0 !important;
+}
+.form-item input.error, .form-item textarea.error, .form-item select.error {
+  border: 2px solid red;
+}
+.form-item .description {
+  font-size: 0.85em;
+}
+.form-item label {
+  display: block;
+  font-weight: bold;
+}
+.form-item label.option {
+  display: inline;
+  font-weight: normal;
+}
+.form-checkboxes, .form-radios {
+  margin: 1.05em 0;
+}
+.form-checkboxes .form-item, .form-radios .form-item {
+  margin-top: 0.42em;
+  margin-bottom: 0.42em;
+}
+.marker, .form-required {
+  color: #f00;
+}
+
+input {
+	font-size:1.05em;
+}
+
+input.form-text {
+	background:#E9E6E4;
+	border:1px solid #BAB5B0;
+	padding:0.2em;
+	width: 90%;
+}
+	#search {
+		float:right;
+		margin-top:-0.2em;
+	}
+	#search div {
+		display:inline;
+	}
+	#search label {display: none;}
+
+
+
+
+
+/*
+
+DRUPAL
+
+*/
+
+
+
+
+
+/*
+** Collapsing fieldsets
+*/
+html.js fieldset.collapsed {
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  margin-bottom: 0;
+  height: 1.05em;
+}
+html.js fieldset.collapsed * {
+  display: none;
+}
+html.js fieldset.collapsed legend {
+  display: block;
+}
+html.js fieldset.collapsible legend a {
+  padding-left: 15px; /* LTR */
+  background: url(/misc/menu-expanded.png) 5px 75% no-repeat; /* LTR */
+}
+html.js fieldset.collapsed legend a {
+  background-image: url(/misc/menu-collapsed.png); /* LTR */
+  background-position: 5px 50%; /* LTR */
+}
+/* Note: IE-only fix due to '* html' (breaks Konqueror otherwise). */
+* html.js fieldset.collapsed legend,
+* html.js fieldset.collapsed legend *,
+* html.js fieldset.collapsed table * {
+  display: inline;
+}
+/* For Safari 2 to prevent collapsible fieldsets containing tables from dissapearing due to tableheader.js. */
+html.js fieldset.collapsible {
+  position: relative;
+}
+html.js fieldset.collapsible legend a {
+  display: block;
+}
+/* Avoid jumping around due to margins collapsing into collapsible fieldset border */
+html.js fieldset.collapsible .fieldset-wrapper {
+  overflow: auto;
+}
+
+/*
+** Autocomplete styles
+*/
+/* Suggestion list */
+#autocomplete {
+  position: absolute;
+  border: 1px solid;
+  overflow: hidden;
+  z-index: 100;
+}
+#autocomplete ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#autocomplete li {
+  background: #fff;
+  color: #000;
+  white-space: pre;
+  cursor: default;
+}
+#autocomplete li.selected {
+  background: #0072b9;
+  color: #fff;
+}
+/* Animated throbber */
+html.js input.form-autocomplete {
+  background-image: url(/misc/throbber.gif);
+  background-repeat: no-repeat;
+  background-position: 100% 6px; /* LTR */
+}
+html.js input.throbbing {
+  background-position: 100% -14px; /* LTR */
+}
+/*
+** Resizable text areas
+*/
+.resizable-textarea {
+  width: 95%;
+}
+.resizable-textarea .grippie {
+  height: 9px;
+  overflow: hidden;
+  background: #eee url(../../misc/grippie.png) no-repeat center 2px;
+  border: 1px solid #ddd;
+  border-top-width: 0;
+  cursor: s-resize;
+}
+html.js .resizable-textarea textarea {
+  margin-bottom: 0;
+  width: 100%;
+  display: block;
+}
+
+/*
+** Table drag and drop.
+*/
+.draggable a.tabledrag-handle {
+  cursor: move;
+  float: left; /* LTR */
+  height: 1.7em;
+  margin: -0.42em 0 -0.42em -0.5em; /* LTR */
+  padding: 0.42em 1.5em 0.42em 0.5em; /* LTR */
+  text-decoration: none;
+}
+a.tabledrag-handle:hover {
+  text-decoration: none;
+}
+a.tabledrag-handle .handle {
+  margin-top: 4px;
+  height: 13px;
+  width: 13px;
+  background: url(../../../../misc/draggable.png) no-repeat 0 0;
+}
+a.tabledrag-handle-hover .handle {
+  background-position: 0 -20px;
+}
+/*
+** Progressbar styles
+*/
+.progress {
+  font-weight: bold;
+}
+.progress .bar {
+  background: #fff url(../../misc/progress.gif);
+  border: 1px solid #00375a;
+  height: 1.5em;
+  margin: 0 0.2em;
+}
+.progress .filled {
+  background: #0072b9;
+  height: 1.05em;
+  border-bottom: 0.5em solid #004a73;
+  width: 0%;
+}
+.progress .percentage {
+  float: right; /* LTR */
+}
+.progress-disabled {
+  float: left; /* LTR */
+}
+.ahah-progress {
+  float: left; /* LTR */
+}
+.ahah-progress .throbber {
+  width: 15px;
+  height: 15px;
+  margin: 2px;
+  background: transparent url(../../misc/throbber.gif) no-repeat 0px -18px;
+  float: left; /* LTR */
+}
+tr .ahah-progress .throbber {
+  margin: 0 2px;
+}
+.ahah-progress-bar {
+  width: 16em;
+}
+/*
+** To be used with tableselect.js
+*/
+tr.selected td {
+  background: #ffc;
+}
+
+/*
+** Floating header for tableheader.js
+*/
+table.sticky-header {
+  margin-top: 0;
+  background: #fff;
+}
+
+
+/*
+** For anything you want to hide on page load when JS is enabled, so
+** that you can use the JS to control visibility and avoid flicker.
+*/
+html.js .js-hide {
+  display: none;
+}
+
+
+
+/*
+** Password strength indicator
+*/
+span.password-strength {
+  visibility: hidden;
+}
+input.password-field {
+  margin-right: 10px; /* LTR */
+}
+div.password-description {
+  padding: 0 2px;
+  margin: 4px 0 0 0;
+  font-size: 0.85em;
+  max-width: 500px;
+}
+div.password-description ul {
+  margin-bottom: 0;
+}
+.password-parent {
+  margin: 0 0 0 0;
+}
+/*
+** Password confirmation checker
+*/
+input.password-confirm {
+  margin-right: 10px; /* LTR */
+}
+.confirm-parent {
+  margin: 5px 0 0 0;
+}
+span.password-confirm {
+  visibility: hidden;
+}
+span.password-confirm span {
+  font-weight: normal;
+}
+
+/*
+** HTML elements
+*/
+body.drag {
+  cursor: move;
+}
+th.active img {
+  display: inline;
+}
+tr.drag {
+  background-color: #fffff0;
+}
+tr.drag-previous {
+  background-color: #ffd;
+}
+td.active {
+  background-color: #ddd;
+}
+td.checkbox, th.checkbox {
+  text-align: center;
+}
+
+
+
+
+#node-admin-filter {
+
+	display: none;
+	
+}

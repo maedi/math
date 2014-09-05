@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>	
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+    <title>MagicMath</title>
+
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="jquery.js"></script>
+	<script src="ui.js"></script>
+
+
+</head>
+
+<body>
+
+	<div id="wrap">
+
+		<div class="object" id="1">
+							
+				<input class="parent" type="hidden" name="parent" value="0">
+				<input class="child" type="hidden" name="child" value="2">
+				
+				<span class="number editme" >10 apples</span>
+				
+		</div>
+
+		<div class="object" id="2">
+		
+				<a class="delete" href="#"></a>
+				
+				<input class="parent" type="hidden" name="parent" value="1">
+				<input class="child" type="hidden" name="child" value="0">
+				
+				<span class="operator times editme">&times;</span>
+				
+				<span class="number editme">12 days of picking</span>
+				
+				<span class="result">5</span>
+		</div>
+		
+		<a class="new" href="#"><img src="images/plus-icon.png" /></a>
+	</div>
+
+
+</body>
+</html>
